@@ -71,7 +71,6 @@ def send_alert(data):
     if not url:
         print('you must set ROBOT_TOKEN env')
         return
-    #url = 'http://10.32.41.21:81/cgi-bin/webhook/send?key=%s' % token
     send_data = makealertdata(data)
     req = requests.post(url, json=send_data)
     result = req.json()
